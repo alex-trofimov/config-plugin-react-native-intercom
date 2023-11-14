@@ -35,8 +35,9 @@ export const withIntercomMainApplication: ConfigPlugin<{
       ...lines.slice(0, importIndex + 1),
       "import com.intercom.reactnative.IntercomModule;",
       ...lines.slice(importIndex + 1, onCreateIndex + 1),
-      '  // @generated begin config-plugin-react-native-intercom-didFinishLaunchingWithOptions',
+      '    // @generated begin config-plugin-react-native-intercom-onCreate',
       `    IntercomModule.initialize(this, ${apiKey}, ${appId});`,
+      '    // @generated end config-plugin-react-native-intercom-onCreate',
       ...lines.slice(onCreateIndex + 1),
     ].join("\n");
 
