@@ -1,6 +1,6 @@
 import { ConfigPlugin, withMainApplication } from "@expo/config-plugins";
 
-import type { IntercomPluginProps } from "./index";
+import type { IntercomPluginProps } from "./withIntercom";
 
 export const withIntercomAndroid: ConfigPlugin<IntercomPluginProps> = (
   config,
@@ -35,6 +35,7 @@ export const withIntercomMainApplication: ConfigPlugin<{
       ...lines.slice(0, importIndex + 1),
       "import com.intercom.reactnative.IntercomModule;",
       ...lines.slice(importIndex + 1, onCreateIndex + 1),
+      '  // @generated begin config-plugin-react-native-intercom-didFinishLaunchingWithOptions',
       `    IntercomModule.initialize(this, ${apiKey}, ${appId});`,
       ...lines.slice(onCreateIndex + 1),
     ].join("\n");

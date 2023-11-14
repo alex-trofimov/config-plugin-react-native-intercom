@@ -11,4 +11,4 @@ const pkg = {
     version: "UNVERSIONED",
 };
 export default createRunOncePlugin(withIntercom, pkg.name, pkg.version);
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=withIntercom.js.map

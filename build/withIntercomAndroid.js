@@ -17,6 +17,7 @@ export const withIntercomMainApplication = (config, { apiKey, appId }) => {
             ...lines.slice(0, importIndex + 1),
             "import com.intercom.reactnative.IntercomModule;",
             ...lines.slice(importIndex + 1, onCreateIndex + 1),
+            '  // @generated begin config-plugin-react-native-intercom-didFinishLaunchingWithOptions',
             `    IntercomModule.initialize(this, ${apiKey}, ${appId});`,
             ...lines.slice(onCreateIndex + 1),
         ].join("\n");

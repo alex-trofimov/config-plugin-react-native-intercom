@@ -1,0 +1,1 @@
+{"version":3,"file":"withIntercom.d.ts","sourceRoot":"","sources":["../src/withIntercom.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,YAAY,EAAuB,MAAM,sBAAsB,CAAC;AAKzE,MAAM,WAAW,sBAAsB;IACrC,SAAS,CAAC,EAAE,MAAM,CAAC;CACpB;AAED,MAAM,WAAW,0BAA0B;IACzC,aAAa,CAAC,EAAE,MAAM,CAAC;CACxB;AAED,MAAM,WAAW,mBACf,SAAQ,sBAAsB,EAC5B,0BAA0B;IAC5B,KAAK,EAAE,MAAM,CAAC;CACf;;AAeD,wBAAwE"}

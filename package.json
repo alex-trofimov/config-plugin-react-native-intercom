@@ -2,7 +2,8 @@
   "name": "config-plugin-react-native-intercom",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "build/withIntercom.js.js",
+  "types": "build/withIntercom.d.ts",
   "scripts": {
     "build": "expo-module build",
     "clean": "expo-module clean",
