@@ -10,4 +10,3 @@ export interface IntercomPluginProps extends IntercomPluginPropsIOS, IntercomPlu
 }
 declare const _default: ConfigPlugin<IntercomPluginProps>;
 export default _default;
-//# sourceMappingURL=withIntercom.d.ts.map

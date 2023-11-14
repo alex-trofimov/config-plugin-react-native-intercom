@@ -1,13 +1,17 @@
-import { withMainApplication } from "@expo/config-plugins";
-export const withIntercomAndroid = (config, { androidApiKey, appId }) => {
-    config = withIntercomMainApplication(config, {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.withIntercomMainApplication = exports.withIntercomAndroid = void 0;
+const config_plugins_1 = require("@expo/config-plugins");
+const withIntercomAndroid = (config, { androidApiKey, appId }) => {
+    config = (0, exports.withIntercomMainApplication)(config, {
         appId,
         apiKey: androidApiKey,
     });
     return config;
 };
-export const withIntercomMainApplication = (config, { apiKey, appId }) => {
-    return withMainApplication(config, async (cfg) => {
+exports.withIntercomAndroid = withIntercomAndroid;
+const withIntercomMainApplication = (config, { apiKey, appId }) => {
+    return (0, config_plugins_1.withMainApplication)(config, async (cfg) => {
         const { modResults } = cfg;
         const { contents } = modResults;
         const lines = contents.split("\n");
@@ -24,4 +28,4 @@ export const withIntercomMainApplication = (config, { apiKey, appId }) => {
         return cfg;
     });
 };
-//# sourceMappingURL=withIntercomAndroid.js.map
+exports.withIntercomMainApplication = withIntercomMainApplication;

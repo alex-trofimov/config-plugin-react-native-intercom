@@ -1,13 +1,17 @@
-import { withAppDelegate } from "@expo/config-plugins";
-export const withIntercomIOS = (config, { appId, iosApiKey }) => {
-    config = withIntercomAppDelegate(config, {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.withIntercomAppDelegate = exports.withIntercomIOS = void 0;
+const config_plugins_1 = require("@expo/config-plugins");
+const withIntercomIOS = (config, { appId, iosApiKey }) => {
+    config = (0, exports.withIntercomAppDelegate)(config, {
         apiKey: iosApiKey,
         appId,
     });
     return config;
 };
-export const withIntercomAppDelegate = (config, { apiKey, appId }) => {
-    return withAppDelegate(config, async (cfg) => {
+exports.withIntercomIOS = withIntercomIOS;
+const withIntercomAppDelegate = (config, { apiKey, appId }) => {
+    return (0, config_plugins_1.withAppDelegate)(config, async (cfg) => {
         const { modResults } = cfg;
         const { contents } = modResults;
         const lines = contents.split("\n");
@@ -25,4 +29,4 @@ export const withIntercomAppDelegate = (config, { apiKey, appId }) => {
         return cfg;
     });
 };
-//# sourceMappingURL=withIntercomIOS.js.map
+exports.withIntercomAppDelegate = withIntercomAppDelegate;

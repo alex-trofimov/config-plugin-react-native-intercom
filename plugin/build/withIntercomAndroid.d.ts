@@ -5,4 +5,3 @@ export declare const withIntercomMainApplication: ConfigPlugin<{
     apiKey: string;
     appId: string;
 }>;
-//# sourceMappingURL=withIntercomAndroid.d.ts.map

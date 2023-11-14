@@ -1,1 +1,1 @@
-module.exports = require('./build/withIntercom');
+module.exports = require('./plugin/build/withIntercom');
